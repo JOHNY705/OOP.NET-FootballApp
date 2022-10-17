@@ -1,0 +1,155 @@
+﻿<Window x:Class="WPF_Projekt.WindowPregledReprezentacije"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Projekt"
+        xmlns:lang="clr-namespace:WPF_Projekt.Resursi"
+        Loaded="Window_Loaded"
+        mc:Ignorable="d"
+        Title="{x:Static lang:Stringovi.stringReprezentacijaProzorNaslov}" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
+   
+    <DockPanel LastChildFill="True">
+
+        <Grid DockPanel.Dock="Top" Height="88" Background="SkyBlue">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Label x:Name="lblNajdraziTim" Content="{x:Static lang:Stringovi.stringNajdraziTim}" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0, 70, 0"></Label>
+
+            <Label x:Name="lblProtivnickiTim" Content="{x:Static lang:Stringovi.stringProtivnickiTim}" FontSize="25" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0, 0, 0"></Label>
+
+            <Label Content="vs." FontSize="25" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0, 0, 0"></Label>
+
+            <Label x:Name="lblNajdraziTimRezultat" Content="0" FontSize="25" Grid.Column="0" Grid.Row ="1"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0, 70, 0"/>
+
+            <Label Content=":" FontSize="25" Grid.Column="1" Grid.Row ="1"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <Label x:Name="lblProtivnickiTimRezultat" Content="0" FontSize="25" Grid.Column="2" Grid.Row ="1"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,0, 0, 0"/>
+            
+        </Grid>
+        <!--Width="212"-->
+        <Grid DockPanel.Dock="Left" Width="212" Background="SkyBlue">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="0.4*"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Label Content="{x:Static lang:Stringovi.stringOdaberiNajdraziTim}" FontSize="20">
+                
+            </Label>
+
+            <ComboBox x:Name="cbNajdraziTim" Grid.Row="1" Height="30" Margin="8,0,8,0" VerticalAlignment="Top" FontSize="15" SelectionChanged="cbNajdraziTim_SelectionChanged">
+            </ComboBox>
+
+            <Button VerticalAlignment="Top" x:Name="btnInfoNajdraziTim" Content="{x:Static lang:Stringovi.stringGumbNajdraziTimInfo}" Grid.Row="2" Height="60" Width="195" FontSize="22" Margin="0,30,0,0" IsEnabled="False" Click="btnInfoNajdraziTim_Click">
+                <Button.Triggers>
+                    <StaticResourceExtension ResourceKey="animacijaGumbaMouseEnter"/>
+                    <StaticResourceExtension ResourceKey="animacijaGumbaMouseLeave"/>
+                </Button.Triggers>
+            </Button>
+            
+        </Grid>
+        <!--Width="212"-->
+        <Grid DockPanel.Dock="Right" Width="212" Background="SkyBlue">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="0.4*"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Label Content="{x:Static lang:Stringovi.stringOdaberiProtivnickiTim}" FontSize="20">
+            </Label>
+
+            <ComboBox x:Name="cbProtivnickiTim" Grid.Row="1" Height="30" Margin="8,0,8,0" VerticalAlignment="Top" FontSize="15" IsEnabled="False" SelectionChanged="cbProtivnickiTim_SelectionChanged">
+            </ComboBox>
+
+            <Button VerticalAlignment="Top" x:Name="btnInfoProtivnickiTim" Content="{x:Static lang:Stringovi.stringGumbNajdraziTimInfo}" Grid.Row="2" Height="60" Width="195" FontSize="22" Margin="0,30,0,0" IsEnabled="False" Click="btnInfoProtivnickiTim_Click">
+                <Button.Triggers>
+                    <StaticResourceExtension ResourceKey="animacijaGumbaMouseEnter"/>
+                    <StaticResourceExtension ResourceKey="animacijaGumbaMouseLeave"/>
+                </Button.Triggers>
+            </Button>
+
+        </Grid>
+
+        <Grid DockPanel.Dock="Bottom" Height="70" Background="SkyBlue">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnIzlaz" FontSize="22" Content="{x:Static lang:Stringovi.stringGumbIzlaz}" Margin="110,10,110,10" Click="btnIzlaz_Click">
+                <Button.Triggers>
+                    <StaticResourceExtension ResourceKey="animacijaGumbaMouseEnter"/>
+                    <StaticResourceExtension ResourceKey="animacijaGumbaMouseLeave"/>
+                </Button.Triggers>
+            </Button>
+
+            <Button x:Name="btnPostavke" FontSize="22" Content="{x:Static lang:Stringovi.stringGumbPostavke}" Margin="110,10,110,10" Grid.Column="1" Click="btnPostavke_Click">
+                <Button.Triggers>
+                    <StaticResourceExtension ResourceKey="animacijaGumbaMouseEnter"/>
+                    <StaticResourceExtension ResourceKey="animacijaGumbaMouseLeave"/>
+                </Button.Triggers>
+            </Button>
+
+        </Grid>
+
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="Resursi/Soccer_Field_Football_Pitch_clip_art_hight.png" Stretch="Fill" />
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="0.3*" />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel x:Name="najdraziTimGolman" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+
+            <StackPanel x:Name="najdraziTimObrana" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+
+            <StackPanel x:Name="najdraziTimVeza" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+
+            <StackPanel x:Name="najdraziTimNapad" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+
+            <StackPanel x:Name="protivnikTimNapad" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+
+            <StackPanel x:Name="protivnikTimVeza" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+
+            <StackPanel x:Name="protivnikTimObrana" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+
+            <StackPanel x:Name="protivnikTimGolman" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+
+        </Grid>
+        
+    </DockPanel>
+</Window>

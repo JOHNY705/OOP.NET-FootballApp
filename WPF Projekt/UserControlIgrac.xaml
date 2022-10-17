@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="WPF_Projekt.UserControlIgrac"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Projekt"
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="90" BorderBrush="Black"
+             MouseDown="UserControl_MouseDown">
+
+    <UserControl.Triggers>
+        <StaticResourceExtension ResourceKey="animacijaUCIgracMouseEnter"/>
+        <StaticResourceExtension ResourceKey="animacijaUCIgracMouseLeave"/>
+    </UserControl.Triggers>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <Image x:Name="slikaIgraca">
+            <Image.Source>
+                <BitmapImage DecodePixelHeight="50" DecodePixelWidth="50" UriSource="/Resursi/football-player-silhouette-png-7.png"/>
+            </Image.Source>
+        </Image>
+
+        <TextBlock x:Name="nazivIgraca" TextAlignment="Center" TextWrapping="WrapWithOverflow" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" FontSize="14">
+            <TextBlock.Text>Pero PERIC</TextBlock.Text>
+        </TextBlock>
+
+        <Label x:Name="brojIgraca" Content="Broj" Grid.Row="2" HorizontalAlignment="Center" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,0,0" FontSize="14"></Label>
+
+    </Grid>
+</UserControl>

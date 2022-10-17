@@ -1,0 +1,55 @@
+﻿<Window x:Class="WPF_Projekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Projekt"
+        xmlns:lang="clr-namespace:WPF_Projekt.Resursi"
+        mc:Ignorable="d"
+        Title="{x:Static lang:Stringovi.stringLokalizacija}" Height="450" Width="550" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.8*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label FontSize="30" Content="{x:Static lang:Stringovi.stringOdabirJezika}" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"></Label>
+
+        <Button x:Name="btnHrvatski" Grid.Row="1" Width="240" Height="120" Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnHrvatski_Click">
+            <Image Source="Resursi/croatia-flag-xs.png" Margin="0" Stretch="Fill"/>
+            <Button.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaGumbaJezikMouseEnter"/>
+                <StaticResourceExtension ResourceKey="animacijaGumbaJezikMouseLeave"/>
+            </Button.Triggers>
+        </Button>
+
+        <Button x:Name="btnEngleski" Grid.Row="1" Grid.Column="1" Width="240" Height="120" Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnEngleski_Click">
+            <Image Source="Resursi/united-kingdom-flag-xs.png" Margin="0" Stretch="Fill"/>
+            <Button.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaGumbaJezikMouseEnter"/>
+                <StaticResourceExtension ResourceKey="animacijaGumbaJezikMouseLeave"/>
+            </Button.Triggers>
+        </Button>
+
+        <Button x:Name="btnPotvrdi" Content="{x:Static lang:Stringovi.btnDalje}" FontSize="22" Grid.Row="2" Grid.Column="1" Width="120" Height="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 20, 20" Click="btnPotvrdi_Click">
+            <Button.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaGumbaMouseEnter"/>
+                <StaticResourceExtension ResourceKey="animacijaGumbaMouseLeave"/>
+            </Button.Triggers>
+        </Button>
+
+        <Button x:Name="btnOdustani" Content="{x:Static lang:Stringovi.btnOdustani}" FontSize="22" Grid.Row="2" Grid.Column="0" Width="120" Height="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20, 0, 0, 20" IsEnabled="True" Click="btnOdustani_Click">
+            <Button.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaGumbaMouseEnter"/>
+                <StaticResourceExtension ResourceKey="animacijaGumbaMouseLeave"/>
+            </Button.Triggers>
+        </Button>
+    </Grid>
+</Window>

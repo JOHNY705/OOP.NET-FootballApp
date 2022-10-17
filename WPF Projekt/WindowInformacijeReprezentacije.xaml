@@ -1,0 +1,146 @@
+﻿<Window x:Class="WPF_Projekt.WindowInformacijeReprezentacije"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Projekt"
+        xmlns:lang="clr-namespace:WPF_Projekt.Resursi"
+        mc:Ignorable="d"
+        Title="{x:Static lang:Stringovi.stringInformacijeReprezentacijaNaslov}" Height="700" Width="520" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="{x:Static lang:Stringovi.stringInformacijeReprezentacijaCountry}" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label x:Name="lblDrzava" Grid.Row="0" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="{x:Static lang:Stringovi.stringInformacijeReprezentacijaFifaCode}" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label x:Name="lblFifaKod" Grid.Row="1" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="{x:Static lang:Stringovi.stringInformacijeReprezentacijaWins}" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label x:Name="lblPobjede" Grid.Row="2" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="{x:Static lang:Stringovi.stringInformacijeReprezentacijaDraws}" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label x:Name="lblNerijeseno" Grid.Row="3" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label Grid.Row="4" Grid.Column="0" Content="{x:Static lang:Stringovi.stringInformacijeReprezentacijaLoses}" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label x:Name="lblPorazi" Grid.Row="4" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label Grid.Row="5" Grid.Column="0" Content="{x:Static lang:Stringovi.stringInformacijeReprezentacijaGamesPlayed}" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label x:Name="lblOdigrano" Grid.Row="5" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label Grid.Row="6" Grid.Column="0" Content="{x:Static lang:Stringovi.stringInformacijeReprezentacijaGoalsFor}" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label x:Name="lblGoalsFor" Grid.Row="6" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label Grid.Row="7" Grid.Column="0" Content="{x:Static lang:Stringovi.stringInformacijeReprezentacijaGoalsAgainst}" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label x:Name="lblGoalsAgainst" Grid.Row="7" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label Grid.Row="8" Grid.Column="0" Content="{x:Static lang:Stringovi.stringInformacijeReprezentacijaDifferential}" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Label x:Name="lblDifferential" Grid.Row="8" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaTekstaFadeIn"/>
+            </Label.Triggers>
+        </Label>
+
+        <Button Content="{x:Static lang:Stringovi.stringGumbZatvori}" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="9" FontSize="22" Click="Button_Click">
+            <Button.Triggers>
+                <StaticResourceExtension ResourceKey="animacijaGumbaMouseEnter"/>
+                <StaticResourceExtension ResourceKey="animacijaGumbaMouseLeave"/>
+            </Button.Triggers>
+        </Button>
+
+    </Grid>
+</Window>
